@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="functional">
+    <test name="GMailTest">
+        <classes>
+            <class name="functional.LoginTest" />
+            <class name="functional.CreateFolderOnDrive" />
+            <class name="functional.LogoutTest" />
+        </classes>
+    </test>
+</suite>
