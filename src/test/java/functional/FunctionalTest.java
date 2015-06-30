@@ -41,7 +41,9 @@ public abstract class FunctionalTest {
         if (methodName.equalsIgnoreCase("createFolderOnGmailDrive")) {
             Object[] param = testResult.getParameters();
             new DrivePage(driver).deleteFolderWithName(param[2].toString());  //param[2] - third parameter of
-        }                                                                     //the Test - name of folder
+            driver.close();                                                   //the Test - name of folder
+            driver.switchToTab(0);
+        }
     }
 
     @AfterSuite (alwaysRun = true)
